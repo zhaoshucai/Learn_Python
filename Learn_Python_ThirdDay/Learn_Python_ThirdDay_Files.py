@@ -4,6 +4,7 @@
 # result = re.match('\s*(\d{1,3})\s+(\w[0-9a-fA-F]{2,3}\.\w[0-9a-fA-F]{2,3}\.\
 # \w[0-9a-fA-F]{2,3})\s+(\w*)\s+(\w*\/\d{1,2}\/\d{1,2})\s*',str1).groups()
 # print(result)
+##方法一、
 # # print('VLAN ID:{0:<10}' '\n'\
 # #       'MAC:{1:<10}' '\n'\
 # #       'Type:{2:<10}' '\n'\
@@ -12,6 +13,7 @@
 # #                  result[1],\
 # #                  result[2],\
 # #                  result[3]))
+#方法二、
 # print('='*50)
 # print('%-10s: %s'%('VLAN ID',result[0]))
 # print('%-10s: %s'%('MAC',result[1]))
