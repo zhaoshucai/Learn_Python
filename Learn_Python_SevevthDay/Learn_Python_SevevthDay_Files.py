@@ -18,12 +18,10 @@ os.mkdir('qytang5')
 
 print('文件中包含"qytang"关键字的文件为:')
 for root , dirs , files in os.walk(os.getcwd(), topdown=False):
-    read_files = os.open('*.txt')
-print(read_files)
-
-
-
-
+   for find_files1 in files:
+       for find_files2 in (open(find_files1,'r')):
+           if 'qytang' in find_files2 :
+              print('',find_files1)
 #完成清理工作
 os.chdir('..')
 for root , dirs , files in os.walk('test' , topdown=False):
