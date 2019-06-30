@@ -1,5 +1,4 @@
 import os
-import re
 os.mkdir('test')
 os.chdir('test')
 qytang1 = open('qytang1','w')
@@ -16,8 +15,13 @@ qytang3.write('this is python\n')
 qytang3.close()
 os.mkdir('qytang4')
 os.mkdir('qytang5')
+
 print('文件中包含"qytang"关键字的文件为:')
-for files_or_dir in os.listdir(os.getcwd()):
+for root , dirs , files in os.walk(os.getcwd(), topdown=False):
+    read_files = os.open('*.txt')
+print(read_files)
+
+
 
 
 #完成清理工作
@@ -28,3 +32,4 @@ for root , dirs , files in os.walk('test' , topdown=False):
     for name in dirs:
         os.rmdir(os.path.join(root,name))
 os.remove('test')
+
