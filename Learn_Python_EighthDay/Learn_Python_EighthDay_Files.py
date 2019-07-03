@@ -1,14 +1,14 @@
-# # 1
+# 1
 
-# import re
-# import os
-# import time
-#
-# from http.server import HTTPServer, CGIHTTPRequestHandler
-# port = 80
-# httpd = HTTPServer(('',port), CGIHTTPRequestHandler)
-# print('Starting simple httpd on port: ' + str(httpd.server_port))
-# httpd.serve_forever()
+import re
+import os
+import time
+
+# # from http.server import HTTPServer, CGIHTTPRequestHandler
+# # port = 80
+# # httpd = HTTPServer(('',port), CGIHTTPRequestHandler)
+# # print('Starting simple httpd on port: ' + str(httpd.server_port))
+# # httpd.serve_forever()
 # while True:
 #     netstat = os.popen('netstat -tulnp').read()
 #     netstat_list = netstat.split('\n')
@@ -21,7 +21,7 @@
 #             print('等待1秒重新开始监控')
 #             time.sleep(1)
 #             continue
-#         break
+#             break
 # if __name__ == '__main__':
 #     pass
 
@@ -35,7 +35,7 @@ list2 = ['bbb', 333, 111, 3.14, (4, 5)]
 #     else:
 #         print(i,'only in list1')
 # print('\n')
-# # 2.2
+# 2.2
 # def findsame(list1,list2):
 #     for i in list1:
 #         if i in list2:
