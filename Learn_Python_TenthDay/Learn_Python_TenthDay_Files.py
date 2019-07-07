@@ -1,5 +1,6 @@
-from router_ping import router_ping
-from router_ssh import router_ssh
+from office_ssh import office_ssh
+from office_ping import office_ping
+
 import re
 import pprint
 
@@ -7,8 +8,8 @@ def router_get_if(*ips,username='admin',password='asiafort@ro'):
     device_if_dict = {}
     for ip in ips:
         if_dict = {}
-        if router_ping(ip):
-            for line in router_ssh(ip,username,password,'ip address print').split('\n'):
+        if office_ping(ip):
+            for line in office_ssh(ip,username,password,'ip address print').split('\n'):
                 re_relust = re.match(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/\d{1,2})\s+'
                                      r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\s+'
                                      r'([a-z]\S+\d+)\s*',line.strip())
