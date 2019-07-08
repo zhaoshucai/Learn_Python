@@ -1,5 +1,5 @@
-from office_ssh import office_ssh
-from office_ping import office_ping
+from Learn_Python_TenthDay.office_ssh import *
+from Learn_Python_TenthDay.office_ping import *
 
 import re
 import pprint

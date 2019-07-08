@@ -8,5 +8,6 @@ def login_ssh (ip, username, password, port = 22, cmd = 'ip address print'):
     stdin, stdout, stderr = ssh.exec_command(cmd)
     return stdout.read().decode()
 
+
 if __name__ == '__main__':
     print(login_ssh('172.30.13.1', 'admin', 'asiafort@ro'))
