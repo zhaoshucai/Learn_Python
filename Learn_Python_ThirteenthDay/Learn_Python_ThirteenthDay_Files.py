@@ -48,7 +48,7 @@ class Newrouterping(routerping):
                 print('?', end='', flush=True)
 
 if __name__ == '__main__':
-    ping = Netmanping('172.30.13.20')#使用类Netmanping,产生示例
+    ping = routerping('172.30.13.20') #使用类routerping,产生示例
     total_len = 70
 
     def print_new(word,s='-'):
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     print(ping) #打印类
     ping.ping() #使用修改长度又修改源的包进行ping测试
     print_new('new class Newping','=')
-    newping = Newping('172.31.1.254') #使用新的类Newping(通过集成Netmanping类产生)产生实例!
+    newping = Newrouterping('172.31.1.254') #使用新的类Newrouterping(通过集成routerping类产生)产生实例!
     newping.length = 300
     print(newping) #打印类
     newping.ping() #Newping类自定义过ping()这个方法，'+'表示通，'?'表示不通
