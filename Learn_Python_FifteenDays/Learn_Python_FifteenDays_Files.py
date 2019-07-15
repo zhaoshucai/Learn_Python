@@ -11,12 +11,12 @@ if os.path.exists('homework.sqlite'):
 conn = sqlite3.connect('homework_dict')
 cursor = conn.cursor()
 
-cursor.execute('create table homework_info(姓名 varchar(40),年龄 int,作业数 int)')
+cursor.execute('create table homework_info (姓名 varchar(40),年龄 int,作业数 int)')
 
 for teacher in homework_dict:
     name = teacher['姓名']
     age = teacher['年龄']
-    honework = teacher['作业数']
-    cursor.execute('insert into homework_info values (
+    homework = teacher['作业数']
+    cursor.execute('insert into homework_info values (?,?,?)',(name, age, homework))
 
 conn.commit()
